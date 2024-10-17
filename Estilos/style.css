@@ -1,0 +1,449 @@
+/* ------ Estilos Base (Index, Login y Signin) ------ */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  font-family: "Spartan", sans-serif; /* Aplica la fuente 'Spartan' */
+  background-color: lightgray;
+  overflow: hidden; /* Evita el scroll no deseado */
+  scroll-behavior: smooth;
+}
+
+/* ------ Estilos para el Encabezado (Header) ------ */
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  background-color: #38393b;
+  width: 100%;
+  position: relative;
+  z-index: 999;
+}
+
+/* Logo y título en el header */
+#logo-container {
+  display: flex;
+  align-items: center;
+}
+
+#logo-container img {
+  margin-right: 10px; /* Espacio entre el logo y el texto */
+}
+
+.page-title {
+  font-size: 2em;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* ------ Barra de navegación ------ */
+#navbar {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar li {
+  margin-left: 20px;
+}
+
+#navbar li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  transition: 0.3s ease;
+}
+
+#navbar li a:hover, 
+#navbar li a.active {
+  color: #ffc107;
+}
+
+#navbar li a i {
+  font-size: 20px; /* Cambia el tamaño del ícono */
+  color: #ffffff; /* Cambia el color del ícono */
+  transition: color 0.3s ease; /* Añade una transición suave */
+}
+
+#navbar li a:hover i {
+  color: #ffc107; /* Cambia el color del ícono al pasar el ratón */
+}
+
+/* ------ Estilos para el Hero (Index) ------ */
+#hero {
+  height: 80vh; /* Mantiene el contenedor a la altura de la pantalla */
+  width: 100%;
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centra el contenido verticalmente */
+  text-align: center; /* Centra el texto horizontalmente */
+  color: white;
+}
+
+#hero h1 {
+  font-size: 3em;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#hero h2 {
+  font-size: 1.8em;
+  font-weight: normal;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#hero h1 span.highlight {
+  color: #ffc107; /* Aplica color amarillo */
+}
+
+.user-actions {
+  display: flex;
+  justify-content: center;
+  gap: 50px; /* Espacio entre los botones */
+  margin-top: 100px;
+}
+
+.btn-action {
+  background-color: #38393b;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre el ícono y el texto */
+  transition: background-color 0.3s ease;
+}
+
+.btn-action:hover {
+  background-color: #ffc107;
+  color: #38393b;
+}
+
+.btn-action i {
+  font-size: 24px;
+}
+
+
+/* ------ Estilos del Formulario (Login y Signin) ------ */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px); /* Altura ajustada para que el header no interfiera */
+  width: 100%;
+}
+
+.form-box {
+  background-color: #38393b;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  color: white;
+}
+
+.form-box h2 {
+  margin-bottom: 20px;
+  color: #ffc107;
+}
+
+.input-box {
+  margin-bottom: 20px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+}
+
+.input-box input:focus {
+  border-color: #ffc107;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #ffc107;
+  border: none;
+  color: #38393b;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #e0a800;
+}
+
+.switch-text {
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+.switch-text a {
+  color: #ffc107;
+  text-decoration: none;
+}
+
+.switch-text a:hover {
+  text-decoration: underline;
+}
+
+/* ------ Responsive: Para pantallas pequeñas ------ */
+@media (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+  #navbar li {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  #logo-container {
+    justify-content: center;
+  }
+  .form-box {
+    padding: 20px;
+  }
+}
+
+
+
+/* Estilo para la sección flotante */
+.floating-section {
+  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #38393b;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  color: white;
+  width: 300px;
+}
+
+.floating-section h3 {
+  margin: 0 0 10px;
+  font-size: 1.5em;
+  color: #ffc107;
+}
+
+.floating-section p {
+  margin: 0;
+  font-size: 1em;
+  color: white;
+}
+
+.floating-section .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+.profile-pic {
+  display: flex;
+  width: 120px; 
+  height: 120px; 
+  border-radius: 50%; 
+  margin-bottom: 50px;
+  border: 2px solid #ebd182; 
+  object-fit: cover; 
+  justify-content: center;
+}
+
+ /* Estilos para la sección de evaluaciones */
+ .evaluations-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.evaluations-title {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #38393b;
+}
+
+.evaluation-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.employee-info {
+  display: flex;
+  align-items: center;
+}
+
+.employee-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.employee-name {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #38393b;
+}
+
+.employee-position {
+  font-size: 0.9em;
+  color: #6c757d;
+}
+
+
+ /* Estilos para las tarjetas de evaluación */
+ .evaluations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.evaluation-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: left;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.evaluation-card:hover {
+  transform: translateY(-5px);
+}
+
+.employee-pic {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.employee-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.employee-details {
+  line-height: 1.2;
+}
+
+.employee-name {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+.employee-position {
+  font-size: 0.9em;
+  color: #777;
+}
+
+.employee-rating {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ffc107;
+}
+
+.employee-rating-a {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 5em;
+  font-weight: bold;
+  color: #ffc107;
+}
+
+.evaluation-description {
+  margin-top: 10px;
+  font-size: 0.95em;
+  color: #555;
+}
+
+.evaluation-description strong {
+  color: #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #dddddd;
+}
+
+th {
+  background-color: #38393b;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+.comment {
+  color: #555;
+}
+
+.employee-name {
+  font-weight: bold;
+}
+
+.client-name {
+  font-style: italic;
+  color: #777;
+}

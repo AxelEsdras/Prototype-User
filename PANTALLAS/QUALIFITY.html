@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QUALIFITY || USER</title>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+  <link rel="stylesheet" href="../Estilos/style.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" />
+  <style>
+    body {
+      background-color: lightgray; /* Color de fondo */
+    }
+    #qualifity {
+      margin-top: 20px;
+    }
+    .star-rating {
+      direction: rtl;
+      display: inline-block;
+      font-size: 2em;
+      margin: 10px 0;
+    }
+    .star-rating input {
+      display: none;
+    }
+    .star-rating label {
+      cursor: pointer;
+      color: #ccc; /* Color de las estrellas vacías */
+    }
+    .star-rating input:checked ~ label,
+    .star-rating label:hover,
+    .star-rating label:hover ~ label {
+      color: #f39c12; /* Color de las estrellas seleccionadas */
+    }
+    .btn-custom {
+      background-color: #38393b; /* Color personalizado para el botón */
+      color: white; /* Color del texto */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Sección de encabezado con logotipo y menú de navegación -->
+  <section id="header">
+    <div id="logo-container">
+      <a href="index.html">
+        <img src="../img/logo.jpg" class="sin-borde" alt="logo" title="Logo" width="100">
+        <span class="page-title">TAXI RATE</span> 
+      </a>
+    </div>
+    <ul id="navbar">
+      <li><a class="active" href="./USER.html" title="Retroceder">
+        <i class="fas fa-chevron-left"></i> <!-- Ícono para Salir -->
+      </a></li>
+      <li><a href="./PERFIL.html" title="Perfil">
+        <i class="fas fa-user"></i> <!-- Ícono para Perfil -->
+      </a></li>
+      <li><a href="./CONFIG.html" title="Configuraciones">
+        <i class="fas fa-cog"></i> <!-- Ícono para Configuraciones -->
+      </a></li>
+      <li><a href="./AYUDA.html" title="Ayuda">
+        <i class="fas fa-question-circle"></i> <!-- Ícono para Ayuda -->
+      </a></li>
+    </ul>    
+  </section>
+
+  <!-- Sección de calificación de conductores -->
+  <section id="qualifity" class="text-center">
+    <h2>Califica a tu Conductor</h2>
+    
+    <!-- Ícono del taxista -->
+    <div class="mb-3">
+      <i class="fas fa-user" style="font-size: 3em;"></i>
+    </div>
+
+    <!-- Información del taxista -->
+    <div>
+      <h5>No. Taxi: 12345</h5>
+      <h5>Placas: ABC123</h5>
+      <h5>Conductor: Juan Pérez</h5>
+    </div>
+
+    <form>
+      <div class="form-group">
+        <label for="rating">Selecciona tu calificación:</label>
+        <div class="star-rating">
+          <input type="radio" id="star5" name="rating" value="5" />
+          <label for="star5" title="Excelente">⭐</label>
+          <input type="radio" id="star4" name="rating" value="4" />
+          <label for="star4" title="Muy Bueno">⭐</label>
+          <input type="radio" id="star3" name="rating" value="3" />
+          <label for="star3" title="Bueno">⭐</label>
+          <input type="radio" id="star2" name="rating" value="2" />
+          <label for="star2" title="Regular">⭐</label>
+          <input type="radio" id="star1" name="rating" value="1" />
+          <label for="star1" title="Malo">⭐</label>
+        </div>
+        <div class="form-group d-flex align-items-center justify-content-center">
+          <textarea id="comment" class="form-control" rows="2" placeholder="Escribe tu comentario aquí..." style="flex: 0 0 70%; resize: none; margin-right: 10px;"></textarea>
+          <button type="submit" class="btn btn-custom" style="height: 40px; width: auto;">Enviar</button>
+        </div>
+        
+           
+    </form>
+  </section>
+
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Metadatos de la página que definen el conjunto de caracteres y compatibilidad con navegadores-->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título que aparecerá en la pestaña del navegador -->
+  <title>RATE TAXI|| USER</title>
+  <!-- Enlaces a hojas de estilo y librerías de iconos para mejorar la apariencia de la página -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+  <link rel="stylesheet" href="../Estilos/style.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" />
+</head>
+
+<body>
+  <!-- Sección de encabezado con logotipo y menú de navegación -->
+  <section id="header">
+    <div id="logo-container">
+      <a href="index.html">
+        <img src="../img/logo.jpg" class="sin-borde" alt="logo" title="Logo" width="100">
+        <span class="page-title">TAXI RATE</span> 
+      </a>
+    </div>
+    <ul id="navbar">
+      <li><a class="active" href="./USER.html" title="Retroceder">
+        <i class="fas fa-chevron-left"></i> <!-- Ícono para Salir -->
+      </a></li>
+      <li><a href="./PANTALLAS/PERFIL.html" title="Perfil">
+        <i class="fas fa-user"></i> <!-- Ícono para Perfil -->
+      </a></li>
+      <li><a href="" title="Configuraciones">
+        <i class="fas fa-cog"></i> <!-- Ícono para Configuraciones -->
+      </a></li>
+      <li><a href="./PANTALLAS/AYUDA.html" title="Ayuda">
+        <i class="fas fa-question-circle"></i> <!-- Ícono para Ayuda -->
+      </a></li>
+    </ul>    
+  </section>
+  
+  
+
+  <!-- Portada principal con un mensaje de bienvenida y botón para dirigir al catálogo -->
+  <section id="hero">
+    <div class="form-container">
+      <form class="form-box">
+          <h2>CONFIGURACIONES</h2>
+          
+          
+            <label for="colores">Seleccionar Idioma:</label>
+            <select id="colores" name="colores">
+              <option value="rojo">Spanish</option>
+              <option value="verde">English</option>
+              
+              
+            </select>
+            
+          
+            <div>
+                <input type="checkbox" id="terminos" name="terminos">
+                <label for="terminos">Acepto los términos y condiciones</label>
+              </div>
+            
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+            <script>
+                const checkbox = document.getElementById('terminos');
+                checkbox.addEventListener('change', () => {
+                    if (checkbox.checked) {
+                        Swal.fire({
+                            title: 'Términos y Condiciones',
+                            html: 'Aquí iría el texto de tus términos y condiciones',
+                            confirmButtonText: 'Aceptar',
+                            showCancelButton: true,
+                            cancelButtonText: 'Cancelar'
+                        }).then((result) => {
+                            if (!result.isConfirmed) {
+                                checkbox.checked = false; // Desmarcar la casilla si el usuario cancela
+                            }
+                        });
+                    }
+                });
+            </script>
+
+<a href="./USER.html" class="btn">Atras</a> 
+      </form>
+      
+  </div>
+  
+</section>
+
+
+
+</body>
+
+</html>
